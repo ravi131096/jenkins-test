@@ -6,3 +6,28 @@ Please ensure it uses a declarative syntax and includes appropriate steps for ea
 What considerations would you take into account for error handling and notifications?
 
 Use echo 'Stage...' to simulate the stage output
+
+pipeline{
+  agent{
+      docker
+     }
+stages
+    {
+  stage(Build){
+    script
+         {
+           sh(docker build -it image id*)
+         }
+     }
+  stage(Testing){
+     script
+       {
+         sh( reports.txt)
+       }
+   stage(Deploy){
+     script
+       {
+        sh( docker run -it imgaetag*)
+       }
+    }
+}
