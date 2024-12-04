@@ -16,18 +16,18 @@ stages
   stage(Build){
     script
          {
-           sh(docker build -it image id*)
+           sh(echo "Build")
          }
      }
   stage(Testing){
      script
        {
-         sh( reports.txt)
+         sh(echo "Testing")
        }
    stage(Deploy){
      script
        {
-        sh( docker run -it imgaetag*)
+        sh(echo "Deploy")
        }
     }
 }
